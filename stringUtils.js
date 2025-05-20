@@ -11,12 +11,12 @@ function capitalize (str){
 
 function reverse (str) {
     try {
-        if (typeof str !== 'string'){
+        if (typeof str !== 'string' || str.length === 0 ){
             throw new Error('Invalid input: Not a String');
         }
         return str.split('').reverse().join('');
 }catch(error){
-        return `reverse() error: ${error.message}`
+        return `reverse() error: ${error.message}`;
     }
 }
 
